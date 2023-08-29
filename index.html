@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> App by Pranav</title>
+<style>
+			* {font-size:50px;}
+			body { background-color:lightblue; }
+				
+				
+</style>
+<script>
+		function show()
+		{
+			event.preventDefault();
+			let name = document.getElementById("name");
+			let ni = document.getElementById("ni");
+			let si = document.getElementById("si");
+			let co = document.getElementById("co");
+			let ans = document.getElementById("ans");
+			
+
+			let choise="";
+			if (ni.checked)		choise ="North Indian ";
+			else if (si.checked)		choise ="South Indian ";
+			else 					choise = "Continental ";
+
+			let msg ="name =" + name.value + "choise= " + choise ;
+			ans.innerHTML = msg;
+
+
+}
+</script>	
+</head>
+<body>
+
+<center>
+			<h1> Food App </h1>
+			<form onsubmit="show()">
+			<input type="text" id="name" placeholder="enter ur name " />
+			<br><br>
+			<input type="radio" name="f" id="ni" />North Indian
+			<input type="radio" name="f" id="si" checked="true" />South Indian
+			<input type="radio" name="f" id="co" />Continental Indian
+
+			<br><br>
+			<input type="submit" />
+			</form>
+			<h1 id="ans" />
+</center>
+</body>
+</html>
